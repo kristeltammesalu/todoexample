@@ -24,17 +24,16 @@ if (Meteor.isClient) {
       console.log("TEre" + todoName + todoDeadline);
 
       if ($.trim(todoName) == '' || $.trim(todoDescription) == '' || !todoDeadline || $.trim(todoPerson) == '') {
-        alert("Please insert all!");
+        alert("Please insert all values!");
         evt.preventDefault();
         Session.set('ifToDoViewTrue',true);
       } else {
         ToDos.insert({todoname: todoName, tododescription: todoDescription, tododeadline: todoDeadline, todoperson: todoPerson});
         Session.set('ifToDoViewTrue',false);
+        $(".add-todo").show();
       }  
 
-      console.log("save" + Session.get('ifToDoViewTrue'));
-
-      evt.preventDefault();
+      
 
 
     },'click .delete': function (e, tmpl) {
