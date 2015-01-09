@@ -1,0 +1,81 @@
+/* CSS declarations go here */
+h1 {
+	float: left;
+	margin-left: 50px;
+}
+
+.add-todo {
+	float: right;
+	margin: 30px 100px 10px 10px;
+}
+
+.save-button {
+	float: right;
+	margin: 0px 100px 10px 10px;
+}
+
+.cancel-button {
+	float: right;
+	margin: 0px 20px 10px 10px;
+}
+
+.header {
+    height:100px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
+}
+
+.ToDoForm {
+	height:400px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin:50px auto;
+    /*visibility: hidden;*/
+
+}
+
+.todo-list {
+	height:550px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:960px;
+    margin: 50px auto;
+}
+
+form {
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+label {
+	font-weight: bold;
+}
+
+table {
+	margin-left: 50px;
+	margin-top: 50px;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+tr {
+	height: 25px;
+}
+
+.todoName {
+	font-size: 18px;
+}
+
+.delete {
+	width: 50px;
+}
+
+.fa-trash {
+	float: right;
+}
+
+#ToDoDescription {
+	resize: none;
+}
