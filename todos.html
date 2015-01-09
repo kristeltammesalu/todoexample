@@ -1,0 +1,71 @@
+<head>
+    <title>ToDo</title>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  	{{> header}}
+
+	{{> content}}  
+</body>
+
+<template name="content">
+	{{#if ifToDoViewTrue}}
+	  	{{> form}}
+	{{else}}  
+		{{> list}}
+	{{/if}}
+</template>
+
+<template name="header">
+  <div class="header">
+  	<h1>ToDo example</h1>
+  	<button class="add-todo">Add ToDo</button>
+  </div>   
+</template>
+
+<template name="form">
+	<div class="ToDoForm">
+		<form>
+		  <div class="form-group">
+		    <label for="ToDoName">ToDo name</label>
+		    <input type="text" class="form-control" id="ToDoName" placeholder="Add ToDo name">
+		  </div>
+		  <div class="form-group">
+		    <label for="ToDoDescription">ToDo description</label>
+		    <textarea type="text" class="form-control" id="ToDoDescription" placeholder="Add ToDo description"></textarea>
+		  </div>
+		  <div class="form-group">
+		    <label for="ToDoDeadline">Date</label>
+		    <input type="date" class="form-control" id="ToDoDeadline" placeholder="Add ToDo deadline">
+		  </div>
+		  <div class="form-group">
+	   	  	<label for="ToDoPerson">ToDo person</label>
+			<input type="text" class="form-control" id="ToDoPerson" placeholder="Add person">
+		  </div>
+		  <button type="submit" class="btn btn-default save-button">Save</button>
+		  <button class="btn btn-default cancel-button">Cancel</button>
+		</form>
+	</div>
+</template>
+
+<template name="list">
+	<div class="todo-list">
+		<table>
+		    {{#each todos}}
+		    {{> todo}}
+		    {{/each}}
+		</table>
+	</div>
+</template>
+
+<template name="todo">
+	<tr>
+		<td><i class="fa fa-circle-o"></i></td>
+		<td class="todoName">{{todoname}}</td>
+		<td class="delete"><i class="fa fa-trash"></i></td>
+	</tr>
+</template>
+
